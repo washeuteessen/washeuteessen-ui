@@ -1,0 +1,4 @@
+name: washeuteessen-ui
+app_name: washeuteessen
+memory_limit: 100Mi
+version: 0.1
