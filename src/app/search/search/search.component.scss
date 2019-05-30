@@ -1,0 +1,30 @@
+::ng-deep {
+  body {
+    background-image: url("../../../assets/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+.search-box {
+  padding: 10px;
+}
+
+.result-box {
+  width: 100%;
+}
+
+.input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 25px;
+  padding: 5px;
+  width: 100%;
+}
+
+.go-icon {
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}

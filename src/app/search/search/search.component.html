@@ -1,0 +1,11 @@
+<div class="search-box" fxlayout="row" fxLayoutAlign="center">
+  <div fxFlex.xs="100%" fxFlex.sm="70%" fxLayout="row">
+    <input class="input" type="text" [(ngModel)]="inputStr" (ngModelChange)="search()">
+    <div class="go-icon">
+      <fa-icon [icon]="goIcon" size="2x"></fa-icon>
+    </div>
+  </div>
+</div>
+<div class="result-box" *ngIf="hasSearchStr">
+  <app-result [searchStr]="searchStr"></app-result>
+</div>
