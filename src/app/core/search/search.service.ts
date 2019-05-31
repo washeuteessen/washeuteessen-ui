@@ -31,4 +31,11 @@ export class SearchService {
     return this.http.get(url, {params});
   }
 
+  public openRecipe(id: string) {
+
+    const url = `${this.host}/recipies/${id}/external`;
+
+    window.open(url, '_blank');
+  }
+
 }
