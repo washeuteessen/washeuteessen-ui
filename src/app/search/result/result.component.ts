@@ -26,6 +26,7 @@ export class ResultComponent implements OnInit, OnChanges {
   ngOnChanges(simpleChanges: SimpleChanges) {
     if (simpleChanges.searchStr) {
       this.recipies = new Array<Recipe>();
+      this.currentOffset = 0;
       this.searchNext();
     }
   }

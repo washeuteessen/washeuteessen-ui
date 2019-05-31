@@ -37,8 +37,7 @@ export class SearchComponent implements OnInit {
   }
 
   get hasSearchStr() {
-    let result = this.searchStr && this.searchStr.length > 0;
-    return result;
+    return this.searchStr && this.searchStr.length > 0;
   }
 
 
