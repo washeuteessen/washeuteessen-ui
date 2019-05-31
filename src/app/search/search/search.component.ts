@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {faArrowCircleRight} from "@fortawesome/free-solid-svg-icons/faArrowCircleRight";
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -9,9 +8,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class SearchComponent implements OnInit {
 
-  goIcon = faArrowCircleRight;
-  searchStr: string;
   inputStr: string;
+  searchStr: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -23,17 +21,20 @@ export class SearchComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       const searchStr = params.s;
       if (searchStr) {
-        this.searchStr = searchStr;
         this.inputStr = searchStr;
+        this.searchStr = searchStr;
       } else {
         this.searchStr = null;
       }
     });
-    this.inputStr = this.route.snapshot.queryParams.s;
   }
 
-  search() {
-    this.router.navigate([], {queryParams: {s: this.inputStr}});
+  search(text?: string) {
+    let s = text;
+    if (!s) {
+      s = this.inputStr;
+    }
+    this.router.navigate([], {queryParams: {s}});
   }
 
   get hasSearchStr() {

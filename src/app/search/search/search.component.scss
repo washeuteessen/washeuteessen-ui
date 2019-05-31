@@ -1,31 +1,29 @@
-::ng-deep {
-  body {
-    background-image: url("../../../assets/background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
 }
 
-.search-box {
-  padding: 10px;
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.info-box {
+  font-size: 60px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+.info-box-xs {
+  font-size: 40px;
+  font-weight: 300;
 }
 
 .result-box {
   width: 100%;
-}
-
-.input {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: none;
-  font-size: 25px;
-  padding: 5px;
-  width: 100%;
-  min-width: 0;
-}
-
-.go-icon {
-  color: white;
-  padding: 5px;
-  cursor: pointer;
 }

@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+
+.logo-centered {
+  justify-content: center;
+}
+
+.logo-text {
+  padding: 0 5px;
+  font-size: 20px;
+}

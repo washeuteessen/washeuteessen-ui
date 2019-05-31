@@ -13,7 +13,7 @@ export class ResultComponent implements OnInit, OnChanges {
   searchStr: string;
   recipies: Array<Recipe>;
 
-  currentOffset: number = 0;
+  currentOffset = 0;
 
   constructor(
     private searchService: SearchService
@@ -32,12 +32,14 @@ export class ResultComponent implements OnInit, OnChanges {
   }
 
   searchNext() {
-    this.searchService.search(this.searchStr, this.currentOffset, 10).subscribe(recipies => {
-      if (recipies.recipies.length > 0) {
-        this.recipies = this.recipies.concat(recipies.recipies);
-        this.currentOffset += recipies.recipies.length;
-      }
-    });
+    if (this.searchStr) {
+      this.searchService.search(this.searchStr, this.currentOffset, 10).subscribe(recipies => {
+        if (recipies.recipies.length > 0) {
+          this.recipies = this.recipies.concat(recipies.recipies);
+          this.currentOffset += recipies.recipies.length;
+        }
+      });
+    }
   }
 
 }

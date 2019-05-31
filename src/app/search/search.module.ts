@@ -5,9 +5,10 @@ import {SharedModule} from '../shared/shared.module';
 import {ResultComponent} from './result/result.component';
 import {FormsModule} from '@angular/forms';
 import {RecipeModule} from '../recipe/recipe.module';
+import { SearchInputComponent } from './search-input/search-input.component';
 
 @NgModule({
-  declarations: [SearchComponent, ResultComponent],
+  declarations: [SearchComponent, ResultComponent, SearchInputComponent],
   imports: [
     CommonModule,
     SharedModule,

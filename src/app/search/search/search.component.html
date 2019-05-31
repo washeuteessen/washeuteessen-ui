@@ -1,11 +1,10 @@
-<div class="search-box" fxlayout="row" fxLayoutAlign="center">
-  <div fxFlex.xs="100%" fxFlex.sm="70%" fxFlex.md="50%" fxFlex.lg="40%" fxLayout="row">
-    <input class="input" type="text" [(ngModel)]="inputStr" (ngModelChange)="search()">
-    <div class="go-icon">
-      <fa-icon [icon]="goIcon" size="2x"></fa-icon>
-    </div>
+<div [class.home]="!hasSearchStr" [class.result]="hasSearchStr">
+  <app-logo *ngIf="!hasSearchStr" centered="true"></app-logo>
+  <div class="info-box" *ngIf="!hasSearchStr" ngClass.xs="info-box-xs">
+    <span>Suche deine Lieblingsrezepte. <br> Einfach. Schnell.</span>
   </div>
-</div>
-<div class="result-box" *ngIf="hasSearchStr">
-  <app-result [searchStr]="searchStr"></app-result>
+  <app-search-input [(text)]="inputStr" [showIcon]="hasSearchStr" (search)="search()"></app-search-input>
+  <div class="result-box" *ngIf="hasSearchStr">
+    <app-result [searchStr]="searchStr"></app-result>
+  </div>
 </div>

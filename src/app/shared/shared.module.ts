@@ -4,18 +4,25 @@ import {MatButtonModule, MatCardModule, MatInputModule, MatRippleModule} from '@
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {InfiniteScrollModule} from 'ngx-infinite-scroll';
+import {LogoComponent} from './logo/logo.component';
+
+const modules = [
+  CommonModule,
+  MatInputModule,
+  FontAwesomeModule,
+  MatCardModule,
+  FlexLayoutModule,
+  MatRippleModule,
+  MatButtonModule,
+  InfiniteScrollModule
+]
 
 @NgModule({
-  declarations: [],
+  declarations: [LogoComponent],
+  imports: modules,
   exports: [
-    CommonModule,
-    MatInputModule,
-    FontAwesomeModule,
-    MatCardModule,
-    FlexLayoutModule,
-    MatRippleModule,
-    MatButtonModule,
-    InfiniteScrollModule
+    modules,
+    LogoComponent
   ]
 })
 export class SharedModule {

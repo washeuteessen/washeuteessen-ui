@@ -1,0 +1,11 @@
+<app-logo fxHide.xs="true" fxFlex.gt-xs="25%" *ngIf="showIcon">
+</app-logo>
+<div class="search-box" fxlayout="row" fxLayoutAlign="center center">
+  <div fxFlex.xs="100%" fxFlex.sm="70%" fxFlex.md="50%" fxFlex.lg="40%" fxLayout="row">
+    <input class="input" type="text" [(ngModel)]="inputStr" (ngModelChange)="inputStrChanged()"
+           (keydown)="keyDown($event)" placeholder="Was möchtest du kochen?">
+    <div class="go-icon" (click)="doSearch()">
+      <fa-icon [icon]="goIcon" size="2x"></fa-icon>
+    </div>
+  </div>
+</div>
