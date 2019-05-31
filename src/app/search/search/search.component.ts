@@ -24,10 +24,12 @@ export class SearchComponent implements OnInit {
       const searchStr = params.s;
       if (searchStr) {
         this.searchStr = searchStr;
+        this.inputStr = searchStr;
       } else {
         this.searchStr = null;
       }
-    })
+    });
+    this.inputStr = this.route.snapshot.queryParams.s;
   }
 
   search() {

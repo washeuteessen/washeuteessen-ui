@@ -1,5 +1,6 @@
-<div fxLayout="row wrap" fxLayoutAlign="start">
+<!--<div fxLayout="row wrap" fxLayoutAlign="start">
   <app-result-item *ngFor="let recipe of recipies" [recipe]="recipe" fxFlex.md="20%" fxFlex.sm="33%" fxFlex.xs="100%"
                    fxFlex.gt-md="20%">
   </app-result-item>
-</div>
+</div>-->
+<app-recipe-grid [recipies]="recipies" *ngIf="recipies" (load)="searchNext()"></app-recipe-grid>

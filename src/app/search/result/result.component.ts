@@ -13,6 +13,8 @@ export class ResultComponent implements OnInit, OnChanges {
   searchStr: string;
   recipies: Array<Recipe>;
 
+  currentOffset: number = 0;
+
   constructor(
     private searchService: SearchService
   ) {
@@ -23,13 +25,17 @@ export class ResultComponent implements OnInit, OnChanges {
 
   ngOnChanges(simpleChanges: SimpleChanges) {
     if (simpleChanges.searchStr) {
-      this.search();
+      this.recipies = new Array<Recipe>();
+      this.searchNext();
     }
   }
 
-  search() {
-    this.searchService.search(this.searchStr).subscribe(recipies => {
-      this.recipies = recipies.recipies;
+  searchNext() {
+    this.searchService.search(this.searchStr, this.currentOffset, 10).subscribe(recipies => {
+      if (recipies.recipies.length > 0) {
+        this.recipies = this.recipies.concat(recipies.recipies);
+        this.currentOffset += recipies.recipies.length;
+      }
     });
   }
 

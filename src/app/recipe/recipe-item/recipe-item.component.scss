@@ -1,0 +1,53 @@
+mat-card-title {
+  word-break: break-all;
+}
+
+::ng-deep {
+  .mat-card-image {
+    margin: 0 -16px -20px -16px !important;
+  }
+}
+
+.recipe-image {
+  width: 100%;
+  padding-top: 5px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+.recipe-item {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.recipe-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.recipe-subtitle {
+  color: rgba(0, 0, 0, .54);
+  font-size: 14px;
+}
+
+.recipe-avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  padding: 18px 18px 10px 18px;
+}
+
+.recipe-header {
+  display: flex;
+}
+
+.recipe-header-content {
+  padding: 18px 18px 18px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

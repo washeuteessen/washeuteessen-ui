@@ -13,11 +13,20 @@ export class SearchService {
   constructor(private http: HttpClient) {
   }
 
-  public search(searchStr: string): Observable<any> {
+  public search(searchStr: string, offset?: number, limit?: number): Observable<any> {
 
     const url = `${this.host}/search`;
 
-    const params = new HttpParams().append('s', searchStr);
+    let params = new HttpParams()
+      .append('s', searchStr);
+
+    if (offset) {
+      params = params.append('offset', '' + offset);
+    }
+
+    if (limit) {
+      params = params.append('limit', '' + limit);
+    }
 
     return this.http.get(url, {params});
   }
