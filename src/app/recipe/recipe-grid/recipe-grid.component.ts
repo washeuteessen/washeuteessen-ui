@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {Recipe} from "../../model/recipe";
+import {Recipe} from '../../model/recipe';
 
 @Component({
   selector: 'app-recipe-grid',

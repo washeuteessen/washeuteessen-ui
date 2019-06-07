@@ -1,0 +1,6 @@
+<app-header [showLogo]="true">
+  <app-header-title>Deine Lieblingsrezepte</app-header-title>
+  <div fxHide.xs="true">
+  </div>
+</app-header>
+<app-recipe-grid [recipies]="recipies" *ngIf="recipies"></app-recipe-grid>

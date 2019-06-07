@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit {
         this.inputStr = searchStr;
         this.searchStr = searchStr;
       } else {
-        this.searchStr = null;
+        this.router.navigate(['/']);
       }
     });
   }
@@ -40,6 +40,5 @@ export class SearchComponent implements OnInit {
   get hasSearchStr() {
     return this.searchStr && this.searchStr.length > 0;
   }
-
 
 }

@@ -1,0 +1,13 @@
+<div class="home-container">
+  <div class="home">
+    <app-logo centered="true"></app-logo>
+    <div class="info-box" ngClass.xs="info-box-xs">
+      <span>Suche deine Lieblingsrezepte. <br> Einfach. Schnell.</span>
+    </div>
+    <div fxLayout="row" class="centered">
+      <app-search-input [(text)]="inputStr" (search)="search()" fxFlex.xs="100%" fxFlex.sm="60%" fxFlex.md="50%"
+                        fxFlex.lg="40%"></app-search-input>
+    </div>
+  </div>
+</div>
+<!--<app-howto></app-howto>-->

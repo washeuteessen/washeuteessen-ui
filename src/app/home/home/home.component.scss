@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+.home-container {
+  height: 100%;
+}
+
+.info-box {
+  font-size: 60px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+}
+
+.info-box-xs {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.centered {
+  justify-content: center;
+}

@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {faUtensils} from '@fortawesome/free-solid-svg-icons/faUtensils';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-logo',
@@ -13,10 +14,14 @@ export class LogoComponent implements OnInit {
   @Input()
   centered = false;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
+  }
+
+  openHome() {
+    this.router.navigate(['/']);
   }
 
 }

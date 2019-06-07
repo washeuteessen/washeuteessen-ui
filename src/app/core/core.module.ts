@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {SearchService} from './search/search.service';
 import {HttpClientModule} from '@angular/common/http';
 import {SourceService} from './source/source.service';
+import {LikeService} from './like/like.service';
 
 @NgModule({
   declarations: [],
@@ -12,7 +13,8 @@ import {SourceService} from './source/source.service';
   ],
   providers: [
     SearchService,
-    SourceService
+    SourceService,
+    LikeService
   ]
 })
 export class CoreModule {

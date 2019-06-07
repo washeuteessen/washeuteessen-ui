@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Recipe} from '../../model/recipe';
-import {SearchService} from "../../core/search/search.service";
-import {SourceService} from "../../core/source/source.service";
+import {SourceService} from '../../core/source/source.service';
+import {RecipeService} from '../../core/recipe/recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -14,7 +14,7 @@ export class RecipeItemComponent implements OnInit {
   recipe: Recipe;
 
   constructor(
-    private searchService: SearchService,
+    private recipeService: RecipeService,
     private logoService: SourceService
   ) {
   }
@@ -23,7 +23,7 @@ export class RecipeItemComponent implements OnInit {
   }
 
   open() {
-    this.searchService.openRecipe(this.recipe.id);
+    this.recipeService.open(this.recipe.id);
   }
 
   get logo() {

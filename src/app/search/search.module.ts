@@ -5,15 +5,18 @@ import {SharedModule} from '../shared/shared.module';
 import {ResultComponent} from './result/result.component';
 import {FormsModule} from '@angular/forms';
 import {RecipeModule} from '../recipe/recipe.module';
-import { SearchInputComponent } from './search-input/search-input.component';
+import {HomeModule} from '../home/home.module';
+import {SearchRoutingModule} from './search-routing.module';
 
 @NgModule({
-  declarations: [SearchComponent, ResultComponent, SearchInputComponent],
+  declarations: [SearchComponent, ResultComponent],
   imports: [
     CommonModule,
     SharedModule,
     FormsModule,
-    RecipeModule
+    RecipeModule,
+    HomeModule,
+    SearchRoutingModule
   ],
   exports: [SearchComponent]
 })

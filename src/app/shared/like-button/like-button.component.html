@@ -1,0 +1,2 @@
+<fa-icon [icon]="likeIcon" class="liked" *ngIf="like" (click)="toggle($event)"></fa-icon>
+<fa-icon [icon]="unlikeIcon" class="normal" *ngIf="!like" (click)="toggle($event)"></fa-icon>
