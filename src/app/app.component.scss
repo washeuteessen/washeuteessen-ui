@@ -1,13 +1,18 @@
 :host {
   height: 100%;
   width: 100%;
+
 }
 
-::ng-deep {
-  body {
-    background-image: url("../assets/background.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+#background {
+  background: url('../assets/background.jpeg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
