@@ -3,7 +3,12 @@
   <div class="info-box" *ngIf="!hasSearchStr" ngClass.xs="info-box-xs">
     <span>Suche deine Lieblingsrezepte. <br> Einfach. Schnell.</span>
   </div>
-  <app-search-input [(text)]="inputStr" [showIcon]="hasSearchStr" (search)="search()"></app-search-input>
+  <div fxLayout="row" [class.centered]="!hasSearchStr">
+    <app-logo fxHide.xs="true" fxFlex.sm="40%" fxFlex.gt-sm="30%" *ngIf="hasSearchStr">
+    </app-logo>
+    <app-search-input [(text)]="inputStr" (search)="search()" fxFlex.xs="100%" fxFlex.sm="60%" fxFlex.md="50%"
+                      fxFlex.lg="40%"></app-search-input>
+  </div>
   <div class="result-box" *ngIf="hasSearchStr">
     <app-result [searchStr]="searchStr"></app-result>
   </div>

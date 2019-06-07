@@ -13,9 +13,6 @@ export class SearchInputComponent implements OnInit, OnChanges {
   @Input()
   text: string;
 
-  @Input()
-  showIcon = false;
-
   @Output()
   textChange = new EventEmitter<string>();
 
