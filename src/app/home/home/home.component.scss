@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 70%;
+  height: 100%;
 }
 
 .home-container {
@@ -23,4 +23,15 @@
 
 .centered {
   justify-content: center;
+}
+
+.graphic-helper {
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  align-self: center;
+}
+
+.graphic {
+  height: 200px;
 }
