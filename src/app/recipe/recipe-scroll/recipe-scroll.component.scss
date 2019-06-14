@@ -1,0 +1,22 @@
+.scroll-title {
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.scroll-item.xs {
+  width: calc(100% - 20px);
+}
+
+.scroll-item.sm {
+  width: calc(50% - 20px);
+}
+
+.scroll-item.md {
+  width: calc(33.333% - 20px);
+}
+
+.scroll-item.lg {
+  width: calc(25% - 20px);
+}

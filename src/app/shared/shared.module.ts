@@ -11,6 +11,7 @@ import {LikeButtonComponent} from './like-button/like-button.component';
 import {LikeLinkComponent} from './like-link/like-link.component';
 import {HeaderComponent} from "./header/header.component";
 import {HeaderTitleComponent} from "./header-title/header-title.component";
+import {DragScrollModule} from "ngx-drag-scroll";
 
 const modules = [
   MatInputModule,
@@ -20,7 +21,8 @@ const modules = [
   MatRippleModule,
   MatButtonModule,
   InfiniteScrollModule,
-  MatBadgeModule
+  MatBadgeModule,
+  DragScrollModule
 ];
 
 const components = [

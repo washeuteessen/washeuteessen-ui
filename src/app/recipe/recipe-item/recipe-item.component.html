@@ -1,13 +1,13 @@
-<div class="recipe-item" matRipple (click)="open()">
+<div class="recipe-item" matRipple (click)="open()" [style.height]="height">
   <div class="recipe-header">
     <img class="recipe-avatar" [src]="logo">
     <div class="recipe-header-content">
-      <div class="recipe-title" ngClass.xs="recipe-title-xs">
+      <span class="recipe-title" ngClass.xs="recipe-title-xs">
         {{recipe.title}}
-      </div>
-      <div class="recipe-subtitle">
+      </span>
+      <span class="recipe-subtitle">
         {{name}}
-      </div>
+      </span>
     </div>
   </div>
   <img class="recipe-image"

@@ -1,14 +1,16 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HowtoComponent} from './today/howto.component';
 import {HomeComponent} from './home/home.component';
 import {SharedModule} from '../shared/shared.module';
+import {TodayComponent} from './today/today.component';
+import {RecipeModule} from '../recipe/recipe.module';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, TodayComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RecipeModule
   ],
   exports: [
     HomeComponent

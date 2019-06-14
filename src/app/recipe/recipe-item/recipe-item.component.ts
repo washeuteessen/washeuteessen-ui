@@ -13,6 +13,9 @@ export class RecipeItemComponent implements OnInit {
   @Input()
   recipe: Recipe;
 
+  @Input()
+  height = 'auto';
+
   constructor(
     private recipeService: RecipeService,
     private logoService: SourceService
