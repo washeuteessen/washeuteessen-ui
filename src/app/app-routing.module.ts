@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home/home.component';
+import {ImpressumComponent} from './home/impressum/impressum.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: 'likes',
     loadChildren: './like/like.module#LikeModule'
+  },
+  {
+    path: 'impressum',
+    component: ImpressumComponent
   },
   {
     path: '',

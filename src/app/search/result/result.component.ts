@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {SearchService} from "../../core/search/search.service";
-import {Recipe} from "../../model/recipe";
+import {SearchService} from '../../core/search/search.service';
+import {Recipe} from '../../model/recipe';
 
 @Component({
   selector: 'app-result',
@@ -12,6 +12,7 @@ export class ResultComponent implements OnInit, OnChanges {
   @Input()
   searchStr: string;
   recipies: Array<Recipe>;
+  moreAvailable = true;
 
   currentOffset = 0;
 
@@ -37,6 +38,8 @@ export class ResultComponent implements OnInit, OnChanges {
         if (recipies.recipies.length > 0) {
           this.recipies = this.recipies.concat(recipies.recipies);
           this.currentOffset += recipies.recipies.length;
+        } else {
+          this.moreAvailable = false;
         }
       });
     }

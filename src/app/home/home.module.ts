@@ -4,13 +4,16 @@ import {HomeComponent} from './home/home.component';
 import {SharedModule} from '../shared/shared.module';
 import {TodayComponent} from './today/today.component';
 import {RecipeModule} from '../recipe/recipe.module';
+import {ImpressumComponent} from './impressum/impressum.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
-  declarations: [HomeComponent, TodayComponent],
+  declarations: [HomeComponent, TodayComponent, ImpressumComponent],
   imports: [
     CommonModule,
     SharedModule,
-    RecipeModule
+    RecipeModule,
+    RouterModule
   ],
   exports: [
     HomeComponent

@@ -5,4 +5,6 @@
   <app-search-input [(text)]="searchStr" (search)="search()" fxFlex.xs="100%" fxFlex.sm="60%" fxFlex.md="50%"
                     fxFlex.lg="40%" *ngIf="showSearch"></app-search-input>
   <app-like-link *ngIf="showLikes"></app-like-link>
+  <div *ngIf="!showLikes">
+  </div>
 </div>

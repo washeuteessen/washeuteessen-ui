@@ -1,6 +1,5 @@
-<!--<div fxLayout="row wrap" fxLayoutAlign="start">
-  <app-result-item *ngFor="let recipe of recipies" [recipe]="recipe" fxFlex.md="20%" fxFlex.sm="33%" fxFlex.xs="100%"
-                   fxFlex.gt-md="20%">
-  </app-result-item>
-</div>-->
-<app-recipe-grid [recipies]="recipies" *ngIf="recipies" (load)="searchNext()"></app-recipe-grid>
+<app-recipe-grid [recipies]="recipies" *ngIf="recipies" (load)="searchNext()"
+                 [showLoadMore]="moreAvailable"></app-recipe-grid>
+<div class="impressum">
+  <a routerLink="/impressum">Impressum</a>
+</div>

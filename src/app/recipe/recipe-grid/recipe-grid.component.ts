@@ -9,11 +9,16 @@ import {Recipe} from '../../model/recipe';
 export class RecipeGridComponent implements OnInit, OnChanges {
 
   static GRIDS = [1, 2, 3, 4];
+  static AMOUNT_AUTO_SCROLLS = 5;
 
   grids: { [id: string]: Array<Array<Recipe>> } = {};
+  currentScroll = 0;
 
   @Input()
   recipies: Array<Recipe>;
+
+  @Input()
+  showLoadMore = false;
 
   @Output()
   load = new EventEmitter();
@@ -48,6 +53,14 @@ export class RecipeGridComponent implements OnInit, OnChanges {
   }
 
   onScroll() {
+    this.currentScroll++;
+    if (this.currentScroll < RecipeGridComponent.AMOUNT_AUTO_SCROLLS) {
+      this.load.emit();
+    }
+  }
+
+  loadMore() {
+    this.currentScroll = 0;
     this.load.emit();
   }
 
