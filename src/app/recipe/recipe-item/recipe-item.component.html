@@ -10,7 +10,7 @@
       </span>
     </div>
   </div>
-  <img class="recipe-image"
+  <img class="recipe-image" *ngIf="recipe.imageSrc"
        src="{{recipe.imageSrc}}">
   <app-like [recipe]="recipe"></app-like>
 </div>
