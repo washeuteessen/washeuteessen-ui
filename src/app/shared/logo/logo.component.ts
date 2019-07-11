@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {faUtensils} from '@fortawesome/free-solid-svg-icons/faUtensils';
 import {Router} from "@angular/router";
 
 @Component({
@@ -9,7 +8,6 @@ import {Router} from "@angular/router";
 })
 export class LogoComponent implements OnInit {
 
-  utensilsIcon = faUtensils;
 
   @Input()
   centered = false;
