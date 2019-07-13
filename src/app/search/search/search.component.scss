@@ -1,9 +1,10 @@
-.result {
+.search {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  height: 100%;
 }
 
-.result-box {
-  width: 100%;
+app-result {
+  min-height: calc(100% - 72px);
 }
