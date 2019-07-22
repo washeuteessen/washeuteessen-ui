@@ -1,25 +1,14 @@
-<div class="grid-row" fxLayout="row" infiniteScroll
-     infiniteScrollDistance="1"
-     (scrolled)="onScroll()">
-  <div class="grid-column" fxLayout="column" *ngFor="let grid of grids[4]" fxShow.lg="true" fxHide="true"
-       fxFlex="25">
-    <app-recipe-item class="recipe-item" *ngFor="let recipe of grid" [recipe]="recipe">
-    </app-recipe-item>
+<ngx-masonry *ngIf="recipies" [useImagesLoaded]="true" infiniteScroll
+             infiniteScrollDistance="1"
+             (scrolled)="onScroll()">
+  <div *ngFor="let recipe of recipies" ngClass.xs="item-xs" ngClass.sm="item-sm" ngClass.md="item-md"
+       ngClass.lg="item-lg" ngClass.xl="item-xl" ngxMasonryItem>
+    <div class="recipe-item">
+      <app-recipe-item [recipe]="recipe">
+      </app-recipe-item>
+    </div>
   </div>
-  <div class="grid-column" fxLayout="column" *ngFor="let grid of grids[3]" fxShow.md="true" fxHide="true"
-       fxFlex="33.333">
-    <app-recipe-item class="recipe-item" *ngFor="let recipe of grid" [recipe]="recipe">
-    </app-recipe-item>
-  </div>
-  <div class="grid-column" fxLayout="column" *ngFor="let grid of grids[2]" fxShow.sm="true" fxHide="true" fxFlex="50">
-    <app-recipe-item class="recipe-item" *ngFor="let recipe of grid" [recipe]="recipe">
-    </app-recipe-item>
-  </div>
-  <div class="grid-column" fxLayout="column" *ngFor="let grid of grids[1]" fxShow.xs="true" fxHide="true">
-    <app-recipe-item class="recipe-item" *ngFor="let recipe of grid" [recipe]="recipe">
-    </app-recipe-item>
-  </div>
-</div>
+</ngx-masonry>
 <div class="load-button" *ngIf="showLoadMore">
   <button mat-raised-button (click)="loadMore()">Mehr laden</button>
 </div>

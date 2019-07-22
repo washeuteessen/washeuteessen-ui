@@ -8,10 +8,8 @@ import {Recipe} from '../../model/recipe';
 })
 export class RecipeGridComponent implements OnInit, OnChanges {
 
-  static GRIDS = [1, 2, 3, 4];
   static AMOUNT_AUTO_SCROLLS = 5;
 
-  grids: { [id: string]: Array<Array<Recipe>> } = {};
   currentScroll = 0;
 
   @Input()
@@ -30,26 +28,6 @@ export class RecipeGridComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.recipies) {
-      this.calcGrids();
-    }
-  }
-
-  calcGrids() {
-    for (const grid of RecipeGridComponent.GRIDS) {
-      this.grids[grid] = this.calcGrid(grid);
-    }
-  }
-
-  calcGrid(columnSize: number) {
-    const grid = new Array<Array<Recipe>>();
-    for (let x = 0; x < columnSize; x++) {
-      grid[x] = new Array<Recipe>();
-    }
-    for (let x = 0; x < this.recipies.length; x++) {
-      grid[x % columnSize].push(this.recipies[x]);
-    }
-    return grid;
   }
 
   onScroll() {
