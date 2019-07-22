@@ -1,14 +1,25 @@
-app-recipe-item {
+.recipe-item {
+  padding: 5px;
+}
+
+.item-xs {
   width: 100%;
 }
 
-app-recipe-item {
-  padding: 5px 0;
+.item-sm {
+  width: 50%;
 }
 
-.grid-column {
-  padding: 0 5px;
-  width: 100%;
+.item-md {
+  width: 33.333%;
+}
+
+.item-lg {
+  width: 25%;
+}
+
+.item-xl {
+  width: 20%;
 }
 
 .load-button {
