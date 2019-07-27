@@ -1,20 +1,12 @@
-<div class="result" *ngIf="recipies">
-  <app-recipe-grid [recipies]="recipies" (load)="searchNext()"
-                   [showLoadMore]="moreAvailable"></app-recipe-grid>
-</div>
-<div class="message" *ngIf="loading">
-  <fa-icon [icon]="faLoading" spin="true" class="message-icon"></fa-icon>
-  Deine Rezepte werden geladen ...
-</div>
-<div class="message" *ngIf="error">
-  <fa-icon [icon]="faWarning" class="message-icon"></fa-icon>
-  Leider haben wir derzeit technische Probleme.<br>
-  Versuch es bitte später erneut!
-</div>
-<div class="message" *ngIf="!loading && !recipies && !moreAvailable">
-  <fa-icon [icon]="faNotFound" class="message-icon"></fa-icon>
-  <div> Es wurden keine Rezepte gefunden</div>
-</div>
+<app-recipe-grid [recipies]="recipies" (load)="searchNext()"
+                 [showLoadMore]="moreAvailable"></app-recipe-grid>
+<app-message *ngIf="loading" [icon]="faLoading" [spin]="true" text="Deine Rezepte werden geladen ..."></app-message>
+<app-message *ngIf="error" [icon]="faWarning"
+             text="Leider haben wir derzeit technische Probleme. Versuch es bitte später erneut!">
+  <button mat-raised-button (click)="searchNext()">Erneut versuchen</button>
+</app-message>
+<app-message *ngIf="!error && !loading && !recipies && !moreAvailable" [icon]="faNotFound"
+             text="Es wurden keine Rezepte gefunden!"></app-message>
 <div class="impressum">
   <a routerLink="/impressum">Impressum</a>
 </div>

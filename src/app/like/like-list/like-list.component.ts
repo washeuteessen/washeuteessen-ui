@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {LikeService} from '../../core/like/like.service';
 import {Recipe} from '../../model/recipe';
+import {faHeart} from '@fortawesome/free-regular-svg-icons/faHeart';
 
 @Component({
   selector: 'app-like-list',
@@ -8,6 +9,8 @@ import {Recipe} from '../../model/recipe';
   styleUrls: ['./like-list.component.scss']
 })
 export class LikeListComponent implements OnInit {
+
+  iconNoFavorites = faHeart;
 
   recipies: Array<Recipe>;
 

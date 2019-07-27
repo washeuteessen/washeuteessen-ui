@@ -9,21 +9,11 @@
   text-decoration: none;
 }
 
-.message {
-  color: white;
-  min-height: calc(100% - 40px);
-  text-align: center;
-
+:host {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.message-icon {
-  font-size: 40px;
-}
-
-.result {
-  min-height: calc(100% - 40px);
+app-message {
+  flex: 1;
 }

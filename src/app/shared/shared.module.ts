@@ -9,10 +9,11 @@ import {SearchInputComponent} from './search-input/search-input.component';
 import {FormsModule} from '@angular/forms';
 import {LikeButtonComponent} from './like-button/like-button.component';
 import {LikeLinkComponent} from './like-link/like-link.component';
-import {HeaderComponent} from "./header/header.component";
-import {HeaderTitleComponent} from "./header-title/header-title.component";
-import {DragScrollModule} from "ngx-drag-scroll";
-import {NgxMasonryModule} from "ngx-masonry";
+import {HeaderComponent} from './header/header.component';
+import {HeaderTitleComponent} from './header-title/header-title.component';
+import {DragScrollModule} from 'ngx-drag-scroll';
+import {NgxMasonryModule} from 'ngx-masonry';
+import {MessageComponent} from './message/message.component';
 
 const modules = [
   MatInputModule,
@@ -33,7 +34,8 @@ const components = [
   LikeButtonComponent,
   LikeLinkComponent,
   HeaderComponent,
-  HeaderTitleComponent
+  HeaderTitleComponent,
+  MessageComponent
 ];
 
 @NgModule({
