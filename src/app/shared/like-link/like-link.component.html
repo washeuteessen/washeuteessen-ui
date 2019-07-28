@@ -1,7 +1,7 @@
-<div class="likes" (click)="openLikes()">
+<a class="likes" (click)="openLikes()">
   <span fxHide.lt-md="true">Likes </span>
   <span matBadge="{{likeCount}}" matBadgePosition="above after"
         matBadgeOverlap="false">
       <fa-icon [icon]="like"></fa-icon>
       </span>
-</div>
+</a>

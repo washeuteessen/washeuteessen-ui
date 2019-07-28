@@ -3,7 +3,16 @@
   <div fxHide.xs="true">
   </div>
 </app-header>
-<app-recipe-grid [recipies]="recipies" *ngIf="recipies"></app-recipe-grid>
-<app-message *ngIf="!recipies || recipies?.length === 0" [icon]="iconNoFavorites" text="Du hast bisher keine Favoriten">
-  <button mat-raised-button routerLink="/search">Finde welche!</button>
-</app-message>
+<div class="content">
+  <app-recipe-grid [recipies]="recipies" *ngIf="recipies"></app-recipe-grid>
+  <app-message *ngIf="!error && !loading && (!recipies || recipies?.length === 0)" [icon]="iconNoFavorites"
+               text="Du hast bisher keine Favoriten">
+    <button mat-raised-button routerLink="/search">Finde welche!</button>
+  </app-message>
+  <app-message *ngIf="loading" [icon]="iconLoading" text="Lade deine Favoriten ..." [spin]="true">
+  </app-message>
+  <app-message *ngIf="error" [icon]="iconError"
+               text="Leider haben wir derzeit technische Probleme. Versuch es bitte später erneut!">
+  </app-message>
+</div>
+<app-impressum-link></app-impressum-link>

@@ -52,10 +52,16 @@ export class LikeService {
     const recipies = new Array<Recipe>();
     this.likeData.forEach(like => {
       this.recipeService.get(like).subscribe(recipe => {
-        recipies.push(recipe);
-        subject.next(Array.from(recipies));
-      });
+          recipies.push(recipe);
+          subject.next(Array.from(recipies));
+        },
+        error => {
+          subject.error(error);
+        });
     });
+    if (this.likeData.length === 0) {
+      subject.complete();
+    }
     return subject.asObservable();
   }
 

@@ -9,6 +9,6 @@
     </div>
   </div>
 </ngx-masonry>
-<div class="load-button" *ngIf="showLoadMore">
+<div class="load-button" *ngIf="showLoadMore && recipies && recipies?.length !== 0">
   <button mat-raised-button (click)="loadMore()">Mehr laden</button>
 </div>

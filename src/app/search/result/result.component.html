@@ -7,6 +7,4 @@
 </app-message>
 <app-message *ngIf="!error && !loading && !recipies && !moreAvailable" [icon]="faNotFound"
              text="Es wurden keine Rezepte gefunden!"></app-message>
-<div class="impressum">
-  <a routerLink="/impressum">Impressum</a>
-</div>
+<app-impressum-link></app-impressum-link>

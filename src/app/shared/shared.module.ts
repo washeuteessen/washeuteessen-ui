@@ -14,6 +14,8 @@ import {HeaderTitleComponent} from './header-title/header-title.component';
 import {DragScrollModule} from 'ngx-drag-scroll';
 import {NgxMasonryModule} from 'ngx-masonry';
 import {MessageComponent} from './message/message.component';
+import {ImpressumLinkComponent} from "./impressum-link/impressum-link.component";
+import {RouterModule} from "@angular/router";
 
 const modules = [
   MatInputModule,
@@ -35,7 +37,8 @@ const components = [
   LikeLinkComponent,
   HeaderComponent,
   HeaderTitleComponent,
-  MessageComponent
+  MessageComponent,
+  ImpressumLinkComponent
 ];
 
 @NgModule({
@@ -43,6 +46,7 @@ const components = [
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
     modules
   ],
   exports: [
