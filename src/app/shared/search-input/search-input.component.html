@@ -1,7 +1,7 @@
 <div fxLayout="row">
   <input class="input" type="text" [(ngModel)]="inputStr" (ngModelChange)="inputStrChanged()"
          (keydown)="keyDown($event)" placeholder="Was möchtest du kochen?">
-  <div class="go-icon" (click)="doSearch()">
+  <a class="go-icon" (click)="doSearch()">
     <fa-icon [icon]="goIcon" size="2x"></fa-icon>
-  </div>
+  </a>
 </div>

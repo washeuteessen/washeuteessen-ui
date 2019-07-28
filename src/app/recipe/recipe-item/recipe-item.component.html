@@ -1,16 +1,18 @@
-<div class="recipe-box" matRipple (click)="open()" [style.height]="height">
-  <div class="recipe-header">
-    <img class="recipe-avatar" [src]="logo">
-    <div class="recipe-header-content">
+<a (click)="open()">
+  <div class="recipe-box" matRipple [style.height]="height">
+    <div class="recipe-header">
+      <img class="recipe-avatar" [src]="logo">
+      <div class="recipe-header-content">
       <span class="recipe-title" ngClass.xs="recipe-title-xs">
         {{recipe.title}}
       </span>
-      <span class="recipe-subtitle">
+        <span class="recipe-subtitle">
         {{name}}
       </span>
+      </div>
     </div>
+    <img class="recipe-image" *ngIf="recipe.imageSrc"
+         src="{{recipe.imageSrc}}">
+    <app-like [recipe]="recipe"></app-like>
   </div>
-  <img class="recipe-image" *ngIf="recipe.imageSrc"
-       src="{{recipe.imageSrc}}">
-  <app-like [recipe]="recipe"></app-like>
-</div>
+</a>
