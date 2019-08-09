@@ -18,7 +18,7 @@ export class ResultComponent implements OnInit, OnChanges {
 
   @Input()
   searchStr: string;
-  recipies: Array<Recipe>;
+  recipes: Array<Recipe>;
   moreAvailable = true;
 
   currentOffset = 0;
@@ -35,7 +35,7 @@ export class ResultComponent implements OnInit, OnChanges {
 
   ngOnChanges(simpleChanges: SimpleChanges) {
     if (simpleChanges.searchStr) {
-      this.recipies = null;
+      this.recipes = null;
       this.currentOffset = 0;
       this.searchNext();
     }
@@ -47,13 +47,13 @@ export class ResultComponent implements OnInit, OnChanges {
       this.loading = true;
       const offset = this.currentOffset;
       this.currentOffset += 15;
-      this.searchService.search(this.searchStr, this.currentOffset, 15).subscribe(recipies => {
+      this.searchService.search(this.searchStr, this.currentOffset, 15).subscribe(recipes => {
           this.loading = false;
-          if (recipies.recipies.length > 0) {
-            if (this.recipies) {
-              this.recipies = this.recipies.concat(recipies.recipies);
+          if (recipes.recipes.length > 0) {
+            if (this.recipes) {
+              this.recipes = this.recipes.concat(recipes.recipes);
             } else {
-              this.recipies = recipies.recipies;
+              this.recipes = recipes.recipes;
             }
           } else {
             this.moreAvailable = false;

@@ -1,7 +1,7 @@
-<ngx-masonry *ngIf="recipies" [useImagesLoaded]="true" infiniteScroll
+<ngx-masonry *ngIf="recipes" [useImagesLoaded]="true" infiniteScroll
              infiniteScrollDistance="1"
              (scrolled)="onScroll()">
-  <div *ngFor="let recipe of recipies" ngClass.xs="item-xs" ngClass.sm="item-sm" ngClass.md="item-md"
+  <div *ngFor="let recipe of recipes" ngClass.xs="item-xs" ngClass.sm="item-sm" ngClass.md="item-md"
        ngClass.lg="item-lg" ngClass.xl="item-xl" ngxMasonryItem>
     <div class="recipe-item">
       <app-recipe-item [recipe]="recipe">
@@ -9,6 +9,6 @@
     </div>
   </div>
 </ngx-masonry>
-<div class="load-button" *ngIf="showLoadMore && recipies && recipies?.length !== 0">
+<div class="load-button" *ngIf="showLoadMore && recipes && recipes?.length !== 0">
   <button mat-raised-button (click)="loadMore()">Mehr laden</button>
 </div>

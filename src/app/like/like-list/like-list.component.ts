@@ -18,15 +18,15 @@ export class LikeListComponent implements OnInit {
 
   error;
   loading = false;
-  recipies: Array<Recipe>;
+  recipes: Array<Recipe>;
 
   constructor(private likeService: LikeService) {
   }
 
   ngOnInit() {
     this.loading = true;
-    this.likeService.getRecipies().subscribe(recipies => {
-        this.recipies = recipies;
+    this.likeService.getRecipes().subscribe(recipes => {
+        this.recipes = recipes;
         this.loading = false;
       },
       error => {

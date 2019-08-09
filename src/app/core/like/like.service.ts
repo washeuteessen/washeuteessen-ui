@@ -47,13 +47,13 @@ export class LikeService {
     this.subject.next(data);
   }
 
-  getRecipies(): Observable<Array<Recipe>> {
+  getRecipes(): Observable<Array<Recipe>> {
     const subject = new Subject<Array<Recipe>>();
-    const recipies = new Array<Recipe>();
+    const recipes = new Array<Recipe>();
     this.likeData.forEach(like => {
       this.recipeService.get(like).subscribe(recipe => {
-          recipies.push(recipe);
-          subject.next(Array.from(recipies));
+          recipes.push(recipe);
+          subject.next(Array.from(recipes));
         },
         error => {
           subject.error(error);

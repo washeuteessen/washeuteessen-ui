@@ -12,7 +12,7 @@ export class RecipeScrollComponent implements OnInit {
   title: string;
 
   @Input()
-  recipies: Array<Recipe>;
+  recipes: Array<Recipe>;
 
   constructor() {
   }

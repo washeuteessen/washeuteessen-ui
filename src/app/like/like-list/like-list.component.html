@@ -4,8 +4,8 @@
   </div>
 </app-header>
 <div class="content">
-  <app-recipe-grid [recipies]="recipies" *ngIf="recipies"></app-recipe-grid>
-  <app-message *ngIf="!error && !loading && (!recipies || recipies?.length === 0)" [icon]="iconNoFavorites"
+  <app-recipe-grid [recipes]="recipes" *ngIf="recipes"></app-recipe-grid>
+  <app-message *ngIf="!error && !loading && (!recipes || recipes?.length === 0)" [icon]="iconNoFavorites"
                text="Du hast bisher keine Favoriten">
     <button mat-raised-button routerLink="/search">Finde welche!</button>
   </app-message>

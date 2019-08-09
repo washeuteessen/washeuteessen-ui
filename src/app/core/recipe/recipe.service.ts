@@ -16,14 +16,14 @@ export class RecipeService {
 
   public open(id: string) {
 
-    const url = `${this.host}/recipies/${id}/external`;
+    const url = `${this.host}/recipes/${id}/external`;
 
     window.open(url, '_blank');
   }
 
   public get(id: string): Observable<Recipe> {
 
-    const url = `${this.host}/recipies/${id}`;
+    const url = `${this.host}/recipes/${id}`;
 
     return this.http.get<Recipe>(url);
   }

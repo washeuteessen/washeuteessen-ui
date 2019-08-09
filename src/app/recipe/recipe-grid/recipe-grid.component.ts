@@ -13,7 +13,7 @@ export class RecipeGridComponent implements OnInit, OnChanges {
   currentScroll = 0;
 
   @Input()
-  recipies: Array<Recipe>;
+  recipes: Array<Recipe>;
 
   @Input()
   showLoadMore = false;
