@@ -1,6 +1,6 @@
 <app-recipe-grid [recipes]="recipes" (load)="searchNext()"
                  [showLoadMore]="moreAvailable"></app-recipe-grid>
-<app-message *ngIf="loading" [icon]="faLoading" [spin]="true" text="Deine Rezepte werden geladen ..."></app-message>
+<app-message *ngIf="loading" [icon]="faLoading" [spin]="true" text="Rezepte werden geladen ..."></app-message>
 <app-message *ngIf="error" [icon]="faWarning"
              text="Leider haben wir derzeit technische Probleme. Versuch es bitte später erneut!">
   <button mat-raised-button (click)="searchNext()">Erneut versuchen</button>
