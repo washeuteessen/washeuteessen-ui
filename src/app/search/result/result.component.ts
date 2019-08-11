@@ -48,7 +48,7 @@ export class ResultComponent implements OnInit, OnChanges {
       this.moreAvailable = false;
       const offset = this.currentOffset;
       this.currentOffset += 15;
-      this.searchService.search(this.searchStr, this.currentOffset, 15).subscribe(recipes => {
+      this.searchService.search(this.searchStr, offset, 15).subscribe(recipes => {
           this.loading = false;
           if (recipes.recipes.length > 0) {
             if (this.recipes) {
